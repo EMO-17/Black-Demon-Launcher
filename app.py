@@ -83,7 +83,6 @@ print("Que accion realisaras?")
 print("  1) Intalar una version...")
 print("  2) Intalar fabric")
 print("  3) Ejecutar una version...")
-print("  4) Verificar verciones intaladas..")
 
 op = input(">>> ")
 
@@ -101,8 +100,9 @@ try:
         
     elif op == 3:
         verificar_versiones()
-        version_minecraft=input("A que version de minecraft deseas ejecutar? (Ej: 1.17.1) :")
-    
+        version_minecraft=input("Que version de minecraft deseas ejecutar? (Ej: 1.17.1) :")
+        ejecutar()
+
     else:
         print("No elegiste nada....",op)
 
