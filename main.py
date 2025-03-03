@@ -1,14 +1,17 @@
 import minecraft_launcher_lib
 import subprocess
 
+
+
+#variables..
 # Diretorio de instalacion..
 minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory()
 
-#variables..
 version_minecraft = "fabric-loader-0.16.10-1.17.1"
 
-current_max = 0
 
+#Barra de carga...
+current_max = 0
 
 def set_status(status: str):
     print(status)
@@ -22,9 +25,6 @@ def set_progress(progress: int):
 def set_max(new_max: int):
     global current_max
     current_max = new_max
-
-
-minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory()
 
 callback = {
     "setStatus": set_status,
@@ -55,7 +55,7 @@ def ejecutar():
         "token": "The acces token"
         }
 
-    minecraft_command = minecraft_launcher_lib.command.get_minecraft_command(version_minecraft, minecraft_directory, options)
+    minecraft_command = minecraft_launcher_lib.command.get_minecraft_command(version_minecraft,minecraft_directory, options)
     
     subprocess.run(minecraft_command, cwd=minecraft_directory)
 
@@ -68,6 +68,9 @@ def verificar_versiones():
     print("Versiones de Minecraft instaladas:")
     for version in installed_versions:
         print(version)
+
+
+
 
 
 
@@ -92,7 +95,7 @@ try:
         instalar_version()
 
     elif op == 2:
-        version_minecraft=input("A que version de minecraft deseas intalale el fablric? :")
+        version_minecraft=input("A que version de minecraft deseas instarle el fablric? :")
         instalar_version_fabric()
         
     elif op == 3:
