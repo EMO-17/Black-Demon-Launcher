@@ -96,14 +96,12 @@ try:
         instalar_version()
 
     elif op == 2:
-        version_minecraft=input("Que version de minecraft deseas intalar el fablric? :")
+        version_minecraft=input("A que version de minecraft deseas intalale el fablric? :")
         instalar_version_fabric()
-    
+        
     elif op == 3:
-        ejecutar()
-    
-    elif op == 4:
         verificar_versiones()
+        version_minecraft=input("A que version de minecraft deseas ejecutar? (Ej: 1.17.1) :")
     
     else:
         print("No elegiste nada....",op)
