@@ -1,8 +1,6 @@
 import minecraft_launcher_lib
 import subprocess
 
-
-
 #variables..
 # Diretorio de instalacion..
 minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory()
