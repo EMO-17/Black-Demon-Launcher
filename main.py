@@ -45,8 +45,8 @@ def instalar_version_fabric():
 #funciones de ejecucion...
 def ejecutar():
     print("Ejecutando..")
-    
-    #options = minecraft_launcher_lib.utils.generate_test_options()  
+
+    #options = minecraft_launcher_lib.utils.generate_test_options()
     options = {
         "username": "EMO_17",
         "uuid": "The UUID",
@@ -54,7 +54,7 @@ def ejecutar():
         }
 
     minecraft_command = minecraft_launcher_lib.command.get_minecraft_command(version_minecraft,minecraft_directory, options)
-    
+
     subprocess.run(minecraft_command, cwd=minecraft_directory)
 
 
@@ -87,7 +87,7 @@ op = input(">>> ")
 
 try:
     op = int(op)
-    
+
     if op == 1:
         version_minecraft=input("Que version deseas intalar? :")
         instalar_version()
@@ -95,7 +95,7 @@ try:
     elif op == 2:
         version_minecraft=input("A que version de minecraft deseas instarle el fablric? :")
         instalar_version_fabric()
-        
+
     elif op == 3:
         verificar_versiones()
         version_minecraft=input("Que version de minecraft deseas ejecutar? (Ej: 1.17.1) :")
@@ -106,13 +106,3 @@ try:
 
 except ValueError:
     print("Entrada no válida. Por favor, ingresa un número.")
-
-
-
-
-
-
-    
-
-
-
