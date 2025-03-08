@@ -1,5 +1,6 @@
 import minecraft_launcher_lib
 import subprocess
+from statusbar import  set_max, set_progress, set_status
 
 #variables..
 # Diretorio de instalacion..
@@ -7,30 +8,11 @@ minecraft_directory = minecraft_launcher_lib.utils.get_minecraft_directory()
 
 version_minecraft = "fabric-loader-0.16.10-1.17.1"
 
-
-#Barra de carga...
-current_max = 0
-
-def set_status(status: str):
-    print(status)
-
-
-def set_progress(progress: int):
-    if current_max != 0:
-        print(f"{progress}/{current_max}")
-
-
-def set_max(new_max: int):
-    global current_max
-    current_max = new_max
-
 callback = {
     "setStatus": set_status,
     "setProgress": set_progress,
     "setMax": set_max
 }
-
-
 
 #funciones de intalacion...
 def instalar_version():
