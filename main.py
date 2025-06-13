@@ -60,8 +60,8 @@ def verificar_versiones():
 #Interfaz del emulador ...
 
 print("Que accion realisaras?")
-print("  1) Intalar una version...")
-print("  2) Intalar fabric")
+print("  1) Instalar una version...")
+print("  2) Instalar fabric...")
 print("  3) Ejecutar una version...")
 
 op = input(">>> ")
@@ -71,11 +71,11 @@ try:
     op = int(op)
 
     if op == 1:
-        version_minecraft=input("Que version deseas intalar? :")
+        version_minecraft=input("Que version deseas instalar? :")
         instalar_version()
 
     elif op == 2:
-        version_minecraft=input("A que version de minecraft deseas instarle el fablric? :")
+        version_minecraft=input("A que version de minecraft le integraras fabric? :")
         instalar_version_fabric()
 
     elif op == 3:
